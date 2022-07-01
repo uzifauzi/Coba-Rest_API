@@ -40,9 +40,18 @@ class _DetailInfoState extends State<DetailInfo> {
             )
           : Column(
               children: [
+                Text('${_detailUser?.id}' ?? "-"),
                 Text(_detailUser?.name ?? "-"),
                 Text(_detailUser?.username ?? "-"),
                 Text(_detailUser?.email ?? "-"),
+                Text(_detailUser?.address.city ?? "-"),
+                Text(_detailUser?.address.street ?? "-"),
+                Text(_detailUser?.address.geo.lat ?? "-"),
+                Text(_detailUser?.address.geo.lng ?? "-"),
+                Text(_detailUser?.phone ?? "-"),
+                Text(_detailUser?.company.name ?? "-"),
+                Text(_detailUser?.company.catchPhrase ?? "-"),
+                Text(_detailUser?.company.bs ?? "-"),
               ],
             ),
     );
